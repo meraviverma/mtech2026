@@ -26,7 +26,120 @@
 5) Markov Model
    - First Order Markov Model
    - Second Markov Model
+6) Probabilty Distribution
+   - Discrete Probability Distribution
+     - probability mass function (PMF).
+     - Bernoulli Distribution → One trial, success/failure.
+     - Binomial Distribution → Number of successes in 𝑛 independent trials.
+     - Poisson Distribution (count data and rate Parameter ) → Number of events in a fixed interval at constant rate.
+     - Geometric Distribution → Number of trials until first success.
+     - Hypergeometric Distribution → Successes in draws without replacement.
+     - Discrete Uniform Distribution → All outcomes equally likely (fair die).
+   - Continuous Probability Distribution
+     - Probability density function (PDF).
+     - Normal (Gaussian) Distribution (1D and MultiVariant)→ Bell curve, symmetric around mean.
+     - Exponential Distribution → Time until next event (memoryless property).
+     - Uniform Distribution → Equal chance for all values in an interval.
+     - t-Distribution → Like normal but heavier tails, used for small samples.
+     - Chi-Square Distribution → Sum of squared normal variables, used in tests of independence
+     - F-Distribution → Ratio of variances, used in ANOVA.
+     - Gamma/Beta Distributions → Flexible families used in Bayesian statistics.
+7) Fundamentals of Probability & Random Variables
 
+   * **Probability Distributions & Density Functions (PDF / PMF):**
+   * **Continuous Distributions:** Gaussian (Normal) Distribution (1D and Multivariate). Understand parameters like mean ($\mu$) and variance ($\sigma^2$), standard deviation, and density curves.
+
+
+   * **Discrete Distributions:** Bernoulli Distribution (success/failure trials) and Poisson Distribution (count data, rate parameter $\lambda$).
+
+
+
+
+   * **Independence & Data Modeling:**
+   * **i.i.d. Assumption:** What *Independent and Identically Distributed* variables mean mathematically, why it allows multiplying individual probabilities into a joint likelihood function, and concept of **Distribution Shift** (Train vs. Test data).
+
+
+
+
+   * **Joint, Marginal, and Conditional Distributions:**
+   * How to compute marginal distributions $P(X)$ and conditional distributions $P(Y \mid X)$ from a joint distribution $P(X, Y)$.
+
+
+   * Understanding how conditioning reduces variance.
+8) Parameter Estimation Techniques
+
+   * **Maximum Likelihood Estimation (MLE):**
+     * Formulating the Likelihood function $L(\theta) = f(x_1, \dots, x_n \mid \theta)$.
+
+
+     * Converting likelihood to Log-Likelihood to simplify derivation.
+     * Analytical MLE derivations for Bernoulli ($p=\frac{\sum x_i}{n}$), Poisson ($\lambda = \bar{x}$), and Gaussian ($\mu = \bar{x}$).
+
+
+
+
+   * **Maximum A-Posteriori (MAP) Estimation:**
+     * Formulating the MAP objective: $\arg\max_\theta P(\theta \mid X)$.
+
+
+     * Analytical derivation of MAP for Gaussian mean with a Gaussian prior (Precision-weighted average).
+
+
+
+
+   * **Loss Minimization & Regularization Connection:**
+   * **Negative Log-Likelihood (NLL):** Showing how maximizing MLE equals minimizing loss (e.g., Cross-Entropy Loss for Bernoulli, Mean Squared Error for Gaussian).
+
+
+   * **Regularization:** Showing how MAP estimation with a Gaussian prior on weights leads directly to $L_2$ Regularization / Ridge Regression ($\lambda = \frac{\sigma^2}{\tau^2}$).
+
+9) Non-Parametric Density Estimation
+
+   * **Parametric vs. Non-Parametric:** Why parametric models can fail if the family assumption is wrong, and how non-parametric parameters grow with sample size $n$.
+
+
+   * **Histograms:** Bin width $h$, origin dependency, discontinuity, and the curse of dimensionality.
+
+
+   * **Kernel Density Estimation (KDE / Parzen Windows):**
+   * Kernel functions $K(u)$ (e.g., Gaussian Kernel) and bandwidth selection ($h$).
+
+10. Multivariable Linear Algebra & Calculus
+
+    * **Vector Calculus & Optimization:**
+      * Gradient operations, setting derivatives/partial derivatives to zero ($\frac{dJ}{d\theta} = 0$) to solve stationary points.
+
+
+
+    * **Multivariate Normal Distribution:**
+      * Mean vectors $\boldsymbol{\mu}$ and Covariance matrices $\boldsymbol{\Sigma}$.
+
+
+      * Matrix Inversion, Transpose operations, and Determinants ($\vert{}\boldsymbol{\Sigma}\vert{}$).
+
+
+      * Covariance vs. Correlation ($\rho$), Variance-Covariance diagonal vs. off-diagonal entries.
+
+
+    * **Mahalanobis Distance** and $\chi^2$ (Chi-squared) distribution for anomaly detection.
+
+11. Discriminative vs. Generative Modeling (ML Applications)
+
+    * **Generative/Joint Modeling $P(X, Y)$:** Modeling features and targets jointly, conditioning to obtain linear regression, and reasons why it breaks down (one-hot vectors, singular matrices, non-Gaussian features).
+
+
+    * **Discriminative/Conditional Modeling $P(Y \mid X)$:**
+      * Linear Regression formulation: $y = \mathbf{w}^T \mathbf{x} + \epsilon$ where $\epsilon \sim \mathcal{N}(0, \sigma^2)$.
+
+
+      * Ordinary Least Squares (OLS) closed-form solution: $\hat{\mathbf{w}}_{\text{ML}} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathbf{y}$.
+
+
+      * Ridge Regression closed-form solution: $\hat{\mathbf{w}}_{\text{MAP}} = (\mathbf{X}^T \mathbf{X} + \lambda \mathbf{I})^{-1} \mathbf{X}^T \mathbf{y}$.
+
+
+    * **Information Theory Basics:** Kullback-Leibler (KL) Divergence and its equivalence to MLE/Log-Likelihood maximization.
+  
 ## 2. Getting Started
 Content goes here...
 
