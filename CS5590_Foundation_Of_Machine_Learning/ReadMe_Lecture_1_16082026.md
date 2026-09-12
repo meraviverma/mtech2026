@@ -140,10 +140,10 @@
 
     * **Information Theory Basics:** Kullback-Leibler (KL) Divergence and its equivalence to MLE/Log-Likelihood maximization.
   
-## 2. Getting Started
+# 2. Probability Distribution
 Content goes here...
 
-### 2.1 Prerequisites
+## 2.1 Discrete Distribution
 Content goes here...
 
 ## 3. Conclusion
